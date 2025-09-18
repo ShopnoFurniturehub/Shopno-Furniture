@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shopno Furniture - Premium quality wooden furniture at affordable prices. Order now for the best wooden furniture in Bangladesh.">
+    <meta name="keywords" content="wooden furniture, furniture Bangladesh, wooden bed, wooden sofa, wooden almirah, furniture online store">
+    <title>Shopno Furniture - Premium Wooden Furniture Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8a3ab9;
+            --secondary: #4c68d7;
+            --accent: #e95950;
+            --light: #fdf3f4;
+            --dark: #333333;
+            --gradient: linear-gradient(45deg, #8a3ab9, #4c68d7, #e95950);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--gradient);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 32px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+        
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            color: white;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: url('https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 36px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .category-img {
+            height: 250px;
+            width: 100%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .category-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .category-info h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .order-btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+        
+        .order-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Image Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        /* YouTube Banner Section */
+        .youtube-banner {
+            width: 100%;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .banner-container {
+            width: 100%;
+            height: 180px; /* YouTube banner size */
+            background: #f1f1f1;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Order Form Section */
+        .order-section {
+            background: white;
+            padding: 50px 0;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            margin: 50px 0;
+        }
+        
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(138, 58, 185, 0.2);
+            outline: none;
+        }
+        
+        .file-upload {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            border: 2px dashed #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary);
+        }
+        
+        .file-upload i {
+            font-size: 40px;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: var(--gradient);
+            padding: 10px;
+            border-radius: 5px 0 0 5px;
+            z-index: 999;
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .admin-btn {
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Ad Spaces */
+        .ad-space {
+            background: #f1f1f1;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+            color: #888;
+        }
+        
+        .ad-space.banner {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .ad-space.social {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--gradient);
+        }
+        
+        .footer-section p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #555;
+        }
+        
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .categories {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .banner-container {
+                height: 150px;
+            }
+            
+            .category-img {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .logo {
+                font-size: 24px;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 16px;
+            }
+            
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .form-title {
+                font-size: 26px;
+            }
+            
+            .banner-container {
+                height: 120px;
+            }
+            
+            .category-img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-couch"></i>
+                Shopno Furniture
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Premium Quality Wooden Furniture</h1>
+            <p>Discover our exclusive collection of handcrafted wooden furniture for your home and office</p>
+            <a href="#order" class="btn">Order Now</a>
+        </div>
+    </section>
+
+    <!-- YouTube Banner Section -->
+    <div class="container youtube-banner">
+        <div class="banner-container" id="youtube-banner">
+            <p>কভার ফটো যোগ করুন (YouTube ব্যানার সাইজ)</p>
+        </div>
+    </div>
+
+    <!-- Ad Space - Banner -->
+    <div class="container">
+        <div class="ad-space banner">
+            <script type="text/javascript">
+                atOptions = {
+                    'key' : 'b86ff946b1825836bad4663551e381ff',
+                    'format' : 'iframe',
+                    'height' : 90,
+                    'width' : 728,
+                    'params' : {}
+                };
+            </script>
+            <script type="text/javascript" src="//www.highperformanceformat.com/b86ff946b1825836bad4663551e381ff/invoke.js"></script>
+        </div>
+    </div>
+
+    <!-- Categories Section -->
+    <section id="categories">
+        <div class="container">
+            <h2 class="section-title">Our Furniture Categories</h2>
+            <div class="categories">
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের পালং</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের পালং</h3>
+                        <p>Wooden Bed</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের সোফা</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের সোফা</h3>
+                        <p>Wooden Sofa</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের আলমারি</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>कাঠের আলমারি</h3>
+                        <p>Wooden Almirah</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের আলনা</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের আলনা</h3>
+                        <p>Wooden Hanger</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের দরজা</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের দরজা</h3>
+                        <p>Wooden Door</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের ড্রেসিং টেবিল</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের ড্রেসিং টেবিল</h3>
+                        <p>Wooden Dressing Table</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের ডেস্কটপ ড্রয়ার</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের ডেস্কটপ ড্রয়ার</h3>
+                        <p>Wooden Desktop Drawer</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের নামাজের ছকি</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের নামাজের ছকি</h3>
+                        <p>Wooden Prayer Stand</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের চেয়ার</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের চেয়ার</h3>
+                        <p>Wooden Chair</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের ডাইনিং টেবিল</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের ডাইনিং টেবিল</h3>
+                        <p>Wooden Dining Table</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের ক্যাবিনেট</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের ক্যাবিনেট</h3>
+                        <p>Wooden Cabinet</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের বক্স খাট</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের বক্স খাট</h3>
+                        <p>Wooden Box Bed</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের বক্স পালং</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের বক্স পালং</h3>
+                        <p>Wooden Box Bed</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের সেমি বক্স পালং</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের সেমি বক্স পালং</h3>
+                        <p>Wooden Semi Box Bed</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের বইয়ের তাক</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের বইয়ের তাক</h3>
+                        <p>Wooden Bookshelf</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের টিভি স্ট্যান্ড</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের টিভি স্ট্যান্ড</h3>
+                        <p>Wooden TV Stand</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের র্যাক</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের র্যাক</h3>
+                        <p>Wooden Rack</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের শিশুদের বিছানা</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের শিশুদের বিছানা</h3>
+                        <p>Wooden Kids Bed</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের কম্পিউটার টেবিল</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের কম্পিউটার টেবিল</h3>
+                        <p>Wooden Computer Table</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <p>কাঠের সাইড টেবিল</p>
+                    </div>
+                    <div class="category-info">
+                        <h3>কাঠের সাইড টেবিল</h3>
+                        <p>Wooden Side Table</p>
+                        <a href="#order" class="order-btn">অর্ডার করুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Space - Social Bar -->
+    <div class="container">
+        <div class="ad-space social">
+            <script type='text/javascript' src='//pl27659301.revenuecpmgate.com/bc/d8/95/bcd89592dd49f0c23bbb26880b862856.js'></script>
+        </div>
+    </div>
+
+    <!-- Order Form Section -->
+    <section class="order-section" id="order">
+        <div class="container">
+            <h2 class="form-title">Order Now</h2>
+            <div class="form-container">
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="name">কাস্টমারের নাম (Customer Name)</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">মোবাইল নাম্বার (Mobile Number)</label>
+                        <input type="tel" id="mobile" name="mobile" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product">প্রোডাক্টের নাম (Product Name)</label>
+                        <select id="product" name="product" required>
+                            <option value="">Select a product</option>
+                            <option value="কাঠের পালং">কাঠের পালং (Wooden Bed)</option>
+                            <option value="কাঠের সোফা">কাঠের সোফা (Wooden Sofa)</option>
+                            <option value="कাঠের আলমারি">কাঠের আলমারি (Wooden Almirah)</option>
+                            <option value="কাঠের আলনা">কাঠের আলনা (Wooden Hanger)</option>
+                            <option value="কাঠের দরজা">কাঠের দরজা (Wooden Door)</option>
+                            <option value="কাঠের ড্রেসিং টেবিল">কাঠের ড্রেসিং টেবিল (Wooden Dressing Table)</option>
+                            <option value="কাঠের ডেস্কটপ ড্রয়ার">কাঠের ডেস্কটপ ড্রয়ার (Wooden Desktop Drawer)</option>
+                            <option value="কাঠের নামাজের ছকি">কাঠের নামাজের ছকি (Wooden Prayer Stand)</option>
+                            <option value="কাঠের চেয়ার">কাঠের চেয়ার (Wooden Chair)</option>
+                            <option value="কাঠের ডাইনিং টেবিল">কাঠের ডাইনিং টেবিল (Wooden Dining Table)</option>
+                            <option value="কাঠের ক্যাবিনেট">কাঠের ক্যাবিনেট (Wooden Cabinet)</option>
+                            <option value="কাঠের বক্স খাট">কাঠের বক্স খাট (Wooden Box Bed)</option>
+                            <option value="কাঠের বক্স পালং">কাঠের বক্স পালং (Wooden Box Bed)</option>
+                            <option value="কাঠের সেমি বক্স পালং">কাঠের সেমি বক্স পালং (Wooden Semi Box Bed)</option>
+                            <option value="কাঠের বইয়ের তাক">কাঠের বইয়ের তাক (Wooden Bookshelf)</option>
+                            <option value="কাঠের টিভি স্ট্যান্ড">কাঠের টিভি স্ট্যান্ড (Wooden TV Stand)</option>
+                            <option value="কাঠের র্যাক">কাঠের র্যাক (Wooden Rack)</option>
+                            <option value="কাঠের শিশুদের বিছানা">কাঠের শিশুদের বিছানা (Wooden Kids Bed)</option>
+                            <option value="কাঠের কম্পিউটার টেবিল">কাঠের কম্পিউটার টেবিল (Wooden Computer Table)</option>
+                            <option value="কাঠের সাইড টেবিল">কাঠের সাইড টেবিল (Wooden Side Table)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">পরিমাণ (Quantity)</label>
+                        <input type="number" id="quantity" name="quantity" min="1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">ঠিকানা (Address)</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="reference">রেফারেন্স ছবি (Reference Image)</label>
+                        <label class="file-upload" for="reference-image">
+                            <div>
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>ছবি আপলোড করুন (Upload Image)</p>
+                            </div>
+                            <input type="file" id="reference-image" accept="image/*" style="display: none;">
+                        </label>
+                    </div>
+                    <button type="submit" class="btn">অর্ডার কনফার্ম করুন (Confirm Order)</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Shopno Furniture offers premium quality wooden furniture at affordable prices. We provide custom furniture solutions for homes and offices across Bangladesh.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Furniture Street, Dhaka, Bangladesh</p>
+                    <p><i class="fas fa-phone"></i> +880 1712 345 678</p>
+                    <p><i class="fas fa-envelope"></i> info@shopnofurniture.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#order">Order Now</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Admin Access</h3>
+                    <ul>
+                        <li><a href="admin.html" target="_blank">Admin Login</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Shopno Furniture. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <!-- Admin Panel Button -->
+    <div class="admin-panel">
+        <a href="admin.html" target="_blank" class="admin-btn">
+            <i class="fas fa-cog"></i>
+        </a>
+    </div>
+
+    <script>
+        // Form submission handling
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('আপনার অর্ডারটি সফলভাবে জমা হয়েছে! আমরা শীঘ্রই আপনার সাথে যোগাযোগ করব।');
+            this.reset();
+        });
+
+        // Image preview functionality
+        const fileUpload = document.getElementById('reference-image');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeModal = document.getElementsByClassName('close')[0];
+
+        fileUpload.addEventListener('change', function(e) {
+            if (this.files && this.files[0]) {
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    modal.style.display = 'block';
+                    modalImg.src = e.target.result;
+                }
+                
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e) {
+            if (e.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Responsive menu adjustment
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                navMenu.style.display = 'flex';
+            } else {
+                navMenu.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
